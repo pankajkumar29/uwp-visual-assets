@@ -8,6 +8,46 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Padding="16">
 
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                       Text="Badges"
+                       Margin="0,0,0,16"/>
+
+            <TextBlock Margin="0,0,0,16"
+                       TextWrapping="Wrap"
+                       LineHeight="24">
+                This app can be added to your lock screen, via the Windows 10 personalisation settings. Once added, 
+                clicking on the <Bold>Send badge notification</Bold> button below will cause the appropriate <Bold>BadgeLogo</Bold>
+                to appear, along with the number 64. Clicking <Bold>Clear badge notification</Bold> will cause the logo and number
+                to disappear.
+            </TextBlock>
+
+            <Button x:Name="SendBadgeNotification"
+                    Content="Send badge notification"
+                    Click="SendBadgeNotification_Click"
+                    Margin="0,0,0,16"/>
+
+            <Button x:Name="ClearBadgeNotification"
+                    Content="Clear badge notification"
+                    Click="ClearBadgeNotification_Click"
+                    Margin="0,0,0,16"/>
+
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                       Text="Toasts"
+                       Margin="0,16,0,16"/>
+
+            <TextBlock Margin="0,0,0,16"
+                       TextWrapping="Wrap"
+                       LineHeight="24">
+                Clicking on the <Bold>Send toast notification</Bold> button below will a simple toast to appear that contains the appropriate
+                <Bold>Square44x44Logo</Bold>.
+            </TextBlock>
+
+            <Button x:Name="SendToastNotification"
+                    Content="Send toast notification"
+                    Click="SendToastNotification_Click"
+                    Margin="0,0,0,16"/>
+        </StackPanel>
     </Grid>
 </Page>
